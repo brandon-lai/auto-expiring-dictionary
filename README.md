@@ -15,3 +15,11 @@ Python appeared to be the natual choice for this kind of data structure because 
 
 ### Would a different language have worked better?
 A low level language such as C or C++ could allow for better performance by allowing low-level manipulation of hardware and more finite control over memory.
+
+## Usage
+### Add this code block at top of file
+```
+from datetime import timedelta
+import time;
+from __init__ import AutoDict
+```
