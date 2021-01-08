@@ -84,17 +84,14 @@ class AutoDict(object):
         return False
 
     def getTotalExpireTime(self, key):
-        """Get the total amount of time the key will be in the cache for"""
         c = self.cache[key]
         return c['expireTime']
 
     def getExpirationTime(self, key):
-        """Return the datetime when the given key will expire"""
         c = self.cache[key]
         return c['timestamp'] + c['expireTime']
 
     def getTimeRemaining(self, key):
-        """Get the time left until the item will expire"""
         return self.getExpirationTime(key) - datetime.now()
 
     def getTimestamp(self, key):
